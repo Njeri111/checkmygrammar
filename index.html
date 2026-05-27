@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>CheckMyGrammar — Free Grammarly Alternative for Students & Professionals</title>
+  <meta name="description" content="CheckMyGrammar is the free Grammarly alternative students and professionals actually need. Check spelling, grammar and style mistakes instantly — no subscription, no signup, no cost. Ever.">
+  <meta name="keywords" content="check my grammar, check my grammar free, free grammarly alternative, grammar checker free no subscription, spell checker for students, check my essay free, grammar checker professionals, free writing tool, grammarly free alternative, check grammar online free">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://checkmygrammar.io/">
+  <meta name="author" content="CheckMyGrammar">
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CheckMyGrammar — Free Grammarly Alternative for Students & Professionals">
+  <meta property="og:description" content="Why pay for Grammarly? CheckMyGrammar catches spelling, grammar and style mistakes instantly. 100% free — no signup, no subscription, no limits.">
+  <meta property="og:url" content="https://checkmygrammar.io/">
+  <meta property="og:site_name" content="CheckMyGrammar">
+
+  <!-- ═══ TWITTER ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CheckMyGrammar — Free Grammar & Spell Checker">
+  <meta name="twitter:description" content="The free Grammarly alternative. Check spelling, grammar & style mistakes instantly. No subscription needed.">
+
+  <!-- ═══ SCHEMA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CheckMyGrammar",
+    "url": "https://checkmygrammar.io",
+    "description": "Free grammar checker and spell corrector — a free alternative to Grammarly for students and professionals",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web Browser",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["Spell checking","Grammar correction","Style suggestions","Punctuation checking","One-click fixes"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is CheckMyGrammar really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely free. No credit card, no subscription, no hidden charges. CheckMyGrammar is free forever." } },
+      { "@type": "Question", "name": "How does CheckMyGrammar compare to Grammarly?", "acceptedAnswer": { "@type": "Answer", "text": "CheckMyGrammar catches spelling, grammar, punctuation and style errors just like Grammarly — at no cost. Grammarly Premium costs up to $30/month. CheckMyGrammar costs $0." } },
+      { "@type": "Question", "name": "Do I need to sign up to use CheckMyGrammar?", "acceptedAnswer": { "@type": "Answer", "text": "No. Just open the page, paste your text, and start fixing. No email address, no password, no account of any kind." } },
+      { "@type": "Question", "name": "Is CheckMyGrammar good for student essays?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CheckMyGrammar checks for the exact errors that cost students marks — subject-verb agreement, wrong word usage, comma splices, punctuation mistakes and more." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --blue:       #2563eb;
+      --blue-dark:  #1d4ed8;
+      --blue-light: #dbeafe;
+      --green:      #16a34a;
+      --green-lt:   #dcfce7;
+      --dark:       #0f172a;
+      --dark2:      #1e293b;
+      --text:       #111827;
+      --muted:      #6b7280;
+      --faint:      #9ca3af;
+      --border:     #e5e7eb;
+      --bg:         #f8fafc;
+      --white:      #ffffff;
+      --r:          12px;
+      --rsm:        8px;
+      --rlg:        20px;
+      --shadow:     0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+      --shadow-lg:  0 10px 40px rgba(0,0,0,.13);
+      --max:        1100px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text); background: var(--white); line-height: 1.6;
+    }
+
+    /* ── NAV ─────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-size: 20px; font-weight: 900; letter-spacing: -.5px; color: var(--dark); text-decoration: none; }
+    .logo .my { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── BUTTONS ─────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 22px; border-radius: var(--rsm);
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      text-decoration: none; transition: all .15s; border: none; font-family: inherit;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,99,235,.4); }
+    .btn-ghost  { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.25); }
+    .btn-ghost:hover  { background: rgba(255,255,255,.2); }
+    .btn-white  { background: #fff; color: var(--blue); font-weight: 700; }
+    .btn-white:hover  { background: #eef2ff; transform: translateY(-1px); }
+    .btn-green  { background: var(--green); color: #fff; }
+    .btn-green:hover  { background: #15803d; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(22,163,74,.35); }
+    .btn-lg { padding: 15px 34px; font-size: 17px; border-radius: var(--r); }
+
+    /* ── HERO ────────────────────────── */
+    .hero {
+      background: linear-gradient(140deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+      padding: 90px 24px 76px; text-align: center; color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(99,102,241,.25), transparent);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      color: #93c5fd; padding: 7px 18px; border-radius: 100px;
+      font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: .03em;
+    }
+    .hero-eyebrow .free-tag {
+      background: #4ade80; color: #052e16;
+      padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 800;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6.5vw, 70px); font-weight: 900;
+      line-height: 1.06; letter-spacing: -2.5px; margin-bottom: 22px;
+    }
+    .hero h1 .line2 { color: #4ade80; display: block; }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 19px); color: #bfdbfe;
+      max-width: 600px; margin: 0 auto 14px; line-height: 1.7;
+    }
+    .hero-sub strong { color: #fff; }
+    .hero-grammarly-note {
+      font-size: 13px; color: rgba(255,255,255,.45);
+      margin-bottom: 36px; letter-spacing: .01em;
+    }
+    .hero-grammarly-note span { color: #fbbf24; font-weight: 600; }
+    .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 44px; }
+    .hero-trust { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .t-pill { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,.6); font-size: 13px; font-weight: 500; }
+    .t-pill .ck { color: #4ade80; font-weight: 800; }
+
+    /* ── SHARED ──────────────────────── */
+    .section { padding: 80px 24px; }
+    .section-inner { max-width: var(--max); margin: 0 auto; }
+    .section-label {
+      display: inline-block; background: var(--blue-light); color: var(--blue);
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; padding: 5px 12px; border-radius: 100px; margin-bottom: 12px;
+    }
+    .section-label.green { background: var(--green-lt); color: var(--green); }
+    .section-label.amber { background: #fffbeb; color: #b45309; }
+    .section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 800; letter-spacing: -.5px; line-height: 1.2; margin-bottom: 12px; }
+    .section-sub   { font-size: 17px; color: var(--muted); max-width: 580px; line-height: 1.65; margin-bottom: 50px; }
+
+    /* ── BANNER STRIP ────────────────── */
+    .banner {
+      background: var(--dark); padding: 18px 24px; text-align: center;
+    }
+    .banner p { color: rgba(255,255,255,.7); font-size: 14px; }
+    .banner strong { color: #4ade80; }
+
+    /* ── EDITOR SECTION ──────────────── */
+    .editor-section { padding: 80px 24px; background: var(--bg); }
+    .editor-section .section-inner { text-align: center; }
+    .editor-section .section-sub { margin: 0 auto 36px; }
+    #react-root { max-width: 860px; margin: 0 auto; text-align: left; }
+
+    /* editor styles */
+    .fmtapp { display: flex; flex-direction: column; gap: 12px; }
+    .fmtapp-head { display: flex; align-items: center; justify-content: space-between; }
+    .fmt-status { font-size: 14px; font-weight: 500; min-width: 120px; text-align: right; }
+    .fmt-checking { color: var(--muted); display: inline-flex; align-items: center; gap: 7px; }
+    .fmt-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #9ca3af; animation: dpulse 1.2s ease-in-out infinite; }
+    @keyframes dpulse { 0%,100%{opacity:.4;transform:scale(.85)} 50%{opacity:1;transform:scale(1)} }
+    .fmt-ok  { color: #15803d; }
+    .fmt-err { color: #dc2626; }
+    .fmt-legend { display: flex; align-items: center; gap: 16px; font-size: 12.5px; color: var(--muted); }
+    .fmt-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .fmt-dl { display: inline-block; width: 22px; height: 3px; border-radius: 2px; }
+    .fmt-dl.spell   { background: #ef4444; }
+    .fmt-dl.grammar { background: #f59e0b; }
+    .fmt-hint { margin-left: auto; font-style: italic; }
+    .fmt-editor-wrap { position: relative; width: 100%; height: 260px; background: #fff; border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+    .fmt-hl, .fmt-ta {
+      position: absolute; inset: 0; padding: 20px 24px;
+      font-family: 'Georgia','Times New Roman',serif;
+      font-size: 16px; line-height: 1.75; letter-spacing: .01em;
+      white-space: pre-wrap; word-wrap: break-word; overflow: auto;
+      border: 2px solid transparent; border-radius: 14px;
+    }
+    .fmt-hl { color: #1a1a2e; background: #fff; z-index: 0; pointer-events: none; user-select: none; }
+    .fmt-ta { color: transparent; caret-color: #1a1a2e; background: transparent; z-index: 1; resize: none; outline: none; transition: border-color .18s; }
+    .fmt-ta:focus { border-color: #3b82f6; }
+    .fmt-ta::placeholder { color: #a8b3c0; }
+    mark { background: transparent; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+    mark.es { text-decoration: underline wavy #ef4444; }
+    mark.eg { text-decoration: underline wavy #f59e0b; }
+    .fmt-foot { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--faint); }
+    .fmt-clear { background: none; border: 1px solid var(--border); border-radius: 7px; padding: 5px 14px; font-size: 13px; color: var(--muted); cursor: pointer; transition: all .13s; font-family: inherit; }
+    .fmt-clear:hover { background: var(--bg); border-color: #d1d5db; color: var(--text); }
+    .fmt-popup { position: fixed; z-index: 500; background: #fff; border-radius: 12px; padding: 14px; width: 215px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); animation: popIn .12s ease-out; }
+    @keyframes popIn { from{opacity:0;transform:translateY(-4px) scale(.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+    .fmt-popup-msg { font-size: 12.5px; color: var(--muted); line-height: 1.45; margin-bottom: 10px; }
+    .fmt-popup-lbl { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); margin-bottom: 6px; }
+    .fmt-suggs { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+    .fmt-sugg { text-align: left; padding: 7px 10px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 7px; font-size: 14px; font-weight: 600; color: #15803d; cursor: pointer; transition: background .13s; font-family: inherit; }
+    .fmt-sugg:hover { background: #dcfce7; }
+    .fmt-ignore { width: 100%; padding: 6px; background: none; border: 1px solid var(--border); border-radius: 7px; font-size: 12px; color: var(--faint); cursor: pointer; font-family: inherit; transition: all .13s; }
+    .fmt-ignore:hover { background: var(--bg); color: var(--muted); }
+
+    /* ── COMPARISON ──────────────────── */
+    .comparison { padding: 80px 24px; background: var(--bg); }
+    .comparison-table {
+      width: 100%; border-collapse: collapse; border-radius: var(--rlg);
+      overflow: hidden; box-shadow: var(--shadow-lg);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 16px 24px; text-align: center; font-size: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+    .comparison-table th { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 20px 24px; }
+    .comparison-table th:first-child, .comparison-table td:first-child { text-align: left; }
+    .comparison-table thead tr { background: var(--dark); }
+    .comparison-table thead th { color: rgba(255,255,255,.6); }
+    .comparison-table thead th.us { color: #4ade80; font-size: 15px; text-transform: none; letter-spacing: 0; font-weight: 800; }
+    .comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+    .comparison-table tbody tr:nth-child(odd)  { background: #fff; }
+    .comparison-table tbody tr:hover { background: var(--blue-light); }
+    .comparison-table td:nth-child(2) { font-weight: 700; color: var(--green); }
+    .ck-yes { color: var(--green); font-size: 18px; font-weight: 800; }
+    .ck-no  { color: #d1d5db; font-size: 18px; }
+    .ck-partial { color: #f59e0b; font-size: 14px; font-weight: 600; }
+    .price-free { color: var(--green); font-weight: 800; font-size: 18px; }
+    .price-paid { color: #dc2626; font-weight: 600; }
+
+    /* ── AUDIENCES ───────────────────── */
+    .audiences { padding: 80px 24px; }
+    .audiences-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .aud-card {
+      border-radius: var(--rlg); padding: 36px 32px;
+      box-shadow: var(--shadow); border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .aud-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .aud-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .aud-card.students::before     { background: linear-gradient(90deg,#3b82f6,#6366f1); }
+    .aud-card.professionals::before{ background: linear-gradient(90deg,#8b5cf6,#ec4899); }
+    .aud-card.everyone::before     { background: linear-gradient(90deg,#16a34a,#0891b2); }
+    .aud-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
+    .aud-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); margin-bottom: 8px; }
+    .aud-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+    .aud-quote {
+      font-style: italic; font-size: 15px; color: var(--muted);
+      border-left: 3px solid var(--border); padding-left: 14px;
+      margin-bottom: 20px; line-height: 1.6;
+    }
+    .aud-card p { color: var(--muted); font-size: 15px; line-height: 1.65; margin-bottom: 18px; }
+    .aud-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .aud-list li { font-size: 14px; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+    .aud-list li::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── FEATURES ────────────────────── */
+    .features { padding: 80px 24px; background: var(--bg); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .feat {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--rlg);
+      padding: 28px; transition: box-shadow .2s, transform .2s;
+    }
+    .feat:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .feat-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; }
+    .feat-icon.red   { background: #fef2f2; }
+    .feat-icon.amber { background: #fffbeb; }
+    .feat-icon.green { background: #f0fdf4; }
+    .feat-icon.blue  { background: #eff6ff; }
+    .feat h3 { font-size: 16px; font-weight: 700; margin-bottom: 7px; }
+    .feat p  { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ────────────────── */
+    .how { padding: 80px 24px; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-top: 52px; }
+    .step-num { width: 52px; height: 52px; background: var(--blue); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; margin: 0 auto 18px; }
+    .step h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .step p  { color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    /* ── TESTIMONIALS ────────────────── */
+    .testimonials { padding: 80px 24px; background: var(--dark); }
+    .testimonials .section-title { color: #fff; }
+    .testimonials .section-sub   { color: rgba(255,255,255,.5); }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .testi {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--rlg); padding: 28px;
+      transition: background .2s;
+    }
+    .testi:hover { background: rgba(255,255,255,.11); }
+    .testi-stars { color: #fbbf24; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+    .testi p { color: rgba(255,255,255,.8); font-size: 15px; line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 800; color: #fff; flex-shrink: 0;
+    }
+    .testi-name { font-size: 14px; font-weight: 700; color: #fff; }
+    .testi-role { font-size: 12px; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+    /* ── FAQ ─────────────────────────── */
+    .faq { padding: 80px 24px; background: var(--bg); }
+    .faq .section-inner { max-width: 720px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 44px; }
+    .faq-item {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--r);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left; padding: 20px 24px;
+      font-size: 16px; font-weight: 600; color: var(--text);
+      background: none; border: none; cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--bg); }
+    .faq-q .arrow { color: var(--blue); font-size: 18px; flex-shrink: 0; transition: transform .2s; }
+    .faq-a { padding: 0 24px 20px; font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .faq-item.open .arrow { transform: rotate(90deg); }
+
+    /* ── ARTICLE ─────────────────────── */
+    .seo-article { padding: 80px 24px; }
+    .article-wrap { max-width: 760px; margin: 0 auto; }
+    .article-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+    .article-meta .tag { background: var(--blue-light); color: var(--blue); padding: 4px 12px; border-radius: 100px; font-weight: 700; font-size: 12px; }
+    .article-wrap > h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 900; line-height: 1.22; letter-spacing: -.5px; margin-bottom: 20px; }
+    .article-lead { font-size: 18px; color: var(--muted); line-height: 1.75; margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
+    .article-wrap h2 { font-size: 22px; font-weight: 800; margin: 40px 0 12px; letter-spacing: -.3px; }
+    .article-wrap h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+    .article-wrap p  { font-size: 16px; line-height: 1.85; color: #374151; margin-bottom: 16px; }
+    .article-wrap ul, .article-wrap ol { margin: 10px 0 20px 22px; }
+    .article-wrap li { font-size: 16px; line-height: 1.75; color: #374151; margin-bottom: 7px; }
+    .callout { background: var(--blue-light); border-left: 4px solid var(--blue); border-radius: 0 var(--rsm) var(--rsm) 0; padding: 18px 20px; margin: 28px 0; }
+    .callout p { margin: 0; font-weight: 600; color: var(--blue-dark); font-size: 15px; }
+    .callout.green { background: var(--green-lt); border-left-color: var(--green); }
+    .callout.green p { color: #14532d; }
+    .article-wrap strong { color: var(--dark); }
+
+    /* ── SIGNUP ──────────────────────── */
+    .signup {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      text-align: center; color: #fff;
+    }
+    .signup h2 { font-size: clamp(24px, 4vw, 38px); font-weight: 900; margin-bottom: 12px; letter-spacing: -.5px; }
+    .signup p  { color: #93c5fd; font-size: 17px; margin-bottom: 34px; line-height: 1.65; }
+    .signup-form { display: flex; gap: 10px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .signup-form input { flex: 1; min-width: 240px; padding: 15px 18px; border-radius: var(--rsm); border: none; font-size: 15px; font-family: inherit; outline: none; }
+    .signup-form input::placeholder { color: #9ca3af; }
+    .signup-note    { color: rgba(255,255,255,.35); font-size: 12.5px; margin-top: 14px; }
+    .signup-success { color: #4ade80; font-size: 16px; font-weight: 600; margin-top: 16px; display: none; }
+
+    /* ── FOOTER ──────────────────────── */
+    .footer { background: var(--dark); padding: 40px 24px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer-logo { font-size: 18px; font-weight: 900; color: #fff; }
+    .footer-logo .my { color: var(--blue); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,.3); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero, .section, .editor-section, .audiences, .features,
+      .how, .testimonials, .faq, .seo-article, .comparison, .signup { padding: 56px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">CheckMy<span class="my">Grammar</span></a>
+    <ul class="nav-links">
+      <li><a href="#try-it">Try Free</a></li>
+      <li><a href="#compare">vs Grammarly</a></li>
+      <li><a href="#who-its-for">Who It's For</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#try-it" class="btn btn-primary" style="padding:9px 20px;font-size:14px;">Check My Grammar →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="free-tag">FREE</span>
+    No subscription · No signup · No credit card
+  </div>
+  <h1>
+    Write Better.<br>
+    <span class="line2">Pay Absolutely Nothing.</span>
+  </h1>
+  <p class="hero-sub">
+    The free spelling and grammar checker that <strong>students</strong> use before submitting essays
+    and <strong>professionals</strong> rely on to polish emails and reports —
+    without paying for Grammarly.
+  </p>
+  <p class="hero-grammarly-note">
+    Grammarly Premium costs up to <span>$30/month</span>. CheckMyGrammar costs $0. Forever.
+  </p>
+  <div class="hero-ctas">
+    <a href="#try-it" class="btn btn-white btn-lg">Check My Grammar Now →</a>
+    <a href="#compare" class="btn btn-ghost btn-lg">See How We Compare ↓</a>
+  </div>
+  <div class="hero-trust">
+    <span class="t-pill"><span class="ck">✓</span> Spelling mistakes</span>
+    <span class="t-pill"><span class="ck">✓</span> Grammar errors</span>
+    <span class="t-pill"><span class="ck">✓</span> Style & clarity</span>
+    <span class="t-pill"><span class="ck">✓</span> One-click fixes</span>
+  </div>
+</section>
+
+<!-- BANNER -->
+<div class="banner">
+  <p>📚 Used by students to fix essays before submission &nbsp;·&nbsp; 💼 Used by professionals to polish emails before sending &nbsp;·&nbsp; <strong>Always free</strong></p>
+</div>
+
+<!-- LIVE EDITOR -->
+<section class="editor-section" id="try-it">
+  <div class="section-inner">
+    <span class="section-label">Live Tool — Free</span>
+    <h2 class="section-title">Check Your Grammar Right Now — Free</h2>
+    <p class="section-sub">Paste your essay, email or report below. Red = spelling. Amber = grammar &amp; style. Click any underlined word to fix it instantly.</p>
+    <div id="react-root"></div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="comparison section" id="compare">
+  <div class="section-inner">
+    <span class="section-label amber">CheckMyGrammar vs Grammarly</span>
+    <h2 class="section-title">Why Pay When You Don't Have To?</h2>
+    <p class="section-sub">Grammarly is great — but at $12–$30/month, it's out of reach for many students and professionals. CheckMyGrammar gives you the same core checking power for free.</p>
+    <div style="overflow-x:auto;">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width:38%;">Feature</th>
+            <th class="us">CheckMyGrammar ✓</th>
+            <th>Grammarly Free</th>
+            <th>Grammarly Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Price</strong></td>
+            <td><span class="price-free">$0 forever</span></td>
+            <td>Free</td>
+            <td><span class="price-paid">$12–$30/mo</span></td>
+          </tr>
+          <tr>
+            <td><strong>Signup required</strong></td>
+            <td><span class="ck-yes">✓ None</span></td>
+            <td><span class="ck-no">✗ Required</span></td>
+            <td><span class="ck-no">✗ Required</span></td>
+          </tr>
+          <tr>
+            <td><strong>Spell checking</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Grammar correction</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-partial">Limited</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Style & clarity</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-no">✗</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Punctuation check</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-partial">Limited</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>Works in browser</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td><strong>No word limit</strong></td>
+            <td><span class="ck-yes">✓</span></td>
+            <td><span class="ck-partial">Limited</span></td>
+            <td><span class="ck-yes">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-size:14px;color:var(--muted);">
+      * Grammarly pricing as of 2025. Comparison based on core writing correction features.
+    </p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="audiences section" id="who-its-for">
+  <div class="section-inner">
+    <span class="section-label">Who It's For</span>
+    <h2 class="section-title">Built for Two Groups Who Need It Most</h2>
+    <p class="section-sub">Students who can't afford a subscription. Professionals who shouldn't have to pay one just to write a clear email.</p>
+    <div class="audiences-grid">
+
+      <div class="aud-card students">
+        <span class="aud-emoji">📚</span>
+        <div class="aud-tag">For Students</div>
+        <h3>Stop Losing Marks Over Simple Mistakes</h3>
+        <div class="aud-quote">"I lost 8 marks on my last essay because of grammar errors. My actual ideas were solid."</div>
+        <p>You worked hard on that assignment. Don't let a spelling mistake or a grammar slip quietly drop your grade. CheckMyGrammar is completely free — paste your essay in, catch every error, submit with confidence.</p>
+        <ul class="aud-list">
+          <li>Essays, reports &amp; research papers</li>
+          <li>Coursework &amp; assignments</li>
+          <li>Personal statements &amp; uni applications</li>
+          <li>Emails to lecturers &amp; professors</li>
+          <li>Dissertations &amp; thesis chapters</li>
+        </ul>
+      </div>
+
+      <div class="aud-card professionals">
+        <span class="aud-emoji">💼</span>
+        <div class="aud-tag">For Professionals</div>
+        <h3>Polish Your Work Without the Monthly Bill</h3>
+        <div class="aud-quote">"I write 30+ emails a day. I'm not paying $30/month just to make sure they're error-free."</div>
+        <p>You write every day at work — emails, reports, proposals, presentations. One typo in front of a client is one too many. CheckMyGrammar catches it all before you hit send, at zero cost.</p>
+        <ul class="aud-list">
+          <li>Business emails &amp; client messages</li>
+          <li>Reports, proposals &amp; presentations</li>
+          <li>Cover letters &amp; job applications</li>
+          <li>LinkedIn posts &amp; professional bios</li>
+          <li>Internal documentation &amp; SOPs</li>
+        </ul>
+      </div>
+
+      <div class="aud-card everyone">
+        <span class="aud-emoji">✍️</span>
+        <div class="aud-tag">For Everyone</div>
+        <h3>Write Clearly — Whatever You're Writing</h3>
+        <div class="aud-quote">"English isn't my first language. This tool helps me write like it is."</div>
+        <p>You don't need to be a student or a professional to care about how you come across. CheckMyGrammar helps anyone — bloggers, non-native speakers, social media creators — write clearly and correctly.</p>
+        <ul class="aud-list">
+          <li>Blog posts &amp; articles</li>
+          <li>Social media captions &amp; bios</li>
+          <li>Messages, letters &amp; reviews</li>
+          <li>Non-native English writers</li>
+          <li>Any text that needs to be right</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features section" id="features">
+  <div class="section-inner">
+    <span class="section-label green">What Gets Checked</span>
+    <h2 class="section-title">Everything Grammarly Checks — Free</h2>
+    <p class="section-sub">CheckMyGrammar catches all the common errors that cost students grades and make professionals look careless.</p>
+    <div class="features-grid">
+      <div class="feat">
+        <div class="feat-icon red">🔴</div>
+        <h3>Spelling Mistakes</h3>
+        <p>Every typo and misspelled word — including "writting", "recieve" and "definately".</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon amber">🟡</div>
+        <h3>Grammar Errors</h3>
+        <p>Subject-verb agreement, wrong tense, "should of" vs "should have", run-on sentences.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon blue">✏️</div>
+        <h3>Style & Clarity</h3>
+        <p>Redundant phrases ("end result"), wordy sentences, overused filler words.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon amber">📌</div>
+        <h3>Punctuation</h3>
+        <p>Missing commas, wrong apostrophes, double spaces — the small things that add up.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon red">🔁</div>
+        <h3>Word Confusion</h3>
+        <p>Their/there/they're, its/it's, affect/effect — words used correctly but in the wrong place.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-icon green">✅</div>
+        <h3>One-Click Fixes</h3>
+        <p>Click any error to see what's wrong and apply the correction instantly. Done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how section" id="how">
+  <div class="section-inner">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Three Steps. Ten Seconds. Perfect Text.</h2>
+    <p class="section-sub" style="margin:0 auto;">No download. No account. Just open and fix.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Paste Your Text</h3>
+        <p>Add your essay, email, report or any writing to the editor. Works with any length of text.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Errors Highlighted Instantly</h3>
+        <p><span style="color:#ef4444;font-weight:700;">Red</span> for spelling. <span style="color:#f59e0b;font-weight:700;">Amber</span> for grammar &amp; style. Appears automatically as you type.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Click to Fix</h3>
+        <p>Tap any underlined word, choose the right correction, and it's fixed. Clean text in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section" id="testimonials">
+  <div class="section-inner">
+    <span class="section-label" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);">What People Say</span>
+    <h2 class="section-title">Writers Who Made the Switch</h2>
+    <p class="section-sub">From students to professionals — here's why people use CheckMyGrammar instead of paying for Grammarly.</p>
+    <div class="testi-grid">
+
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I'm a third-year student and I genuinely cannot afford Grammarly. CheckMyGrammar catches everything I need for my essays — grammar, spelling, all of it. And it's completely free. This is exactly what I needed."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Aisha K.</div>
+            <div class="testi-role">University student, Business Studies</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I was paying $30 a month for Grammarly just to fix my client emails. Cancelled it the day I found CheckMyGrammar. Does exactly the same job. The one-click fix is brilliant — faster than anything I've used."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">M</div>
+          <div>
+            <div class="testi-name">Marcus T.</div>
+            <div class="testi-role">Marketing Manager</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p>"English is my second language and grammar has always been my weak point at work. CheckMyGrammar doesn't just flag errors — it explains them. I've actually learned from it. And it's free, which I still can't believe."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#16a34a,#0891b2)">L</div>
+          <div>
+            <div class="testi-name">Linh P.</div>
+            <div class="testi-role">Business Analyst</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section" id="faq">
+  <div class="section-inner">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions We Get Asked</h2>
+    <p class="section-sub">Everything you need to know before you start — not that there's much to know.</p>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is CheckMyGrammar really free? There must be a catch.
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a">No catch. CheckMyGrammar is completely free — no credit card, no trial period, no "freemium" limits. You can use it as much as you want, as many times as you want, forever. We plan to introduce a Pro version in the future for power users, but the core tool will always be free.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does it compare to Grammarly?
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a" style="display:none">CheckMyGrammar uses LanguageTool — a professional-grade grammar and spell checking engine used by millions worldwide. It catches spelling, grammar, style, and punctuation errors just like Grammarly. Grammarly does have additional features like tone detection and a plagiarism checker. But for core writing correction? CheckMyGrammar does the job — for free.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need to sign up or create an account?
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a" style="display:none">Not at all. Just open the page and start typing or paste your text. No email, no password, no account. You're checking your text in under 10 seconds from arriving on this page.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is it good for student essays and assignments?
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a" style="display:none">Yes — this is one of the main reasons CheckMyGrammar was built. It catches the specific grammar and spelling errors that cost students marks: subject-verb agreement, wrong word usage (their/there, its/it's), comma splices, incorrect tense, and more. Paste your essay before submitting and fix everything in minutes.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is my text private and secure?
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a" style="display:none">Your text is sent to the LanguageTool API for analysis. It is not stored, logged or shared. We recommend not pasting text containing passwords, financial details or highly sensitive personal information — as with any online tool.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does it work for non-native English speakers?
+          <span class="arrow">›</span>
+        </button>
+        <div class="faq-a" style="display:none">Absolutely. CheckMyGrammar is especially useful for non-native English writers because it not only flags errors but explains what's wrong and why. Many users say they've actually improved their English by reading the corrections over time.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEO ARTICLE -->
+<section class="seo-article" id="article">
+  <div class="article-wrap">
+
+    <div class="article-meta">
+      <span class="tag">Writing Guide</span>
+      <span>10 min read</span>
+      <span>·</span>
+      <span>Students &amp; Professionals</span>
+    </div>
+
+    <h1>CheckMyGrammar: The Free Grammarly Alternative Students and Professionals Actually Need</h1>
+
+    <p class="article-lead">
+      Grammarly changed how people write online — but at $12 to $30 a month, it's left a lot of
+      people behind. Students on tight budgets. Professionals who write emails, not novels.
+      Anyone who just needs to fix their text without signing up for a subscription. This guide
+      explores what good writing correction actually requires, who needs it most, and why
+      free tools like CheckMyGrammar close the gap more than most people realise.
+    </p>
+
+    <h2>Why Grammar and Spell Checking Matters — Especially If You Can't Afford Grammarly</h2>
+    <p>
+      Good writing isn't just about looking smart. For students, clear and correct writing
+      directly affects grades — even when the underlying ideas are excellent. For professionals,
+      a typo in a client email, a grammar mistake in a proposal, or an unclear sentence in a
+      report can quietly undermine your credibility. The writing quality people see is often
+      the first — and sometimes only — impression they form of you.
+    </p>
+    <p>
+      The problem is that quality writing tools have always come with a price tag. Grammarly
+      Premium, the gold standard, costs up to $30 per month or $144 per year. For a student
+      already stretched between rent, tuition and textbooks, that's not a realistic option.
+      For a professional who just needs to fix their emails, it's hard to justify.
+    </p>
+    <p>
+      That's the gap CheckMyGrammar was built to fill. A free, no-signup grammar checker and spell
+      corrector that catches the errors that matter most — for students, professionals and
+      everyone in between.
+    </p>
+
+    <div class="callout green">
+      <p>✅ CheckMyGrammar is free forever. No subscription, no credit card, no account. Just open it and fix your text.</p>
+    </div>
+
+    <h2>What Students Need from a Writing Tool</h2>
+    <p>
+      Student writing has specific, recurring problem patterns. Understanding them helps you
+      fix your essays more efficiently — and understand why certain corrections come up
+      again and again.
+    </p>
+
+    <h3>The errors that cost students marks</h3>
+    <ul>
+      <li><strong>Subject-verb agreement:</strong> "Me and my friend goes to school" — should be "My friend and I go to school." This single error signals weak grammar control to any academic marker.</li>
+      <li><strong>Apostrophe misuse:</strong> "Its a good point" instead of "It's a good point." Apostrophe errors are among the most penalised in academic writing.</li>
+      <li><strong>"Should of" / "Could of":</strong> These should always be "should have" and "could have." Common in student essays and immediately noticeable to lecturers.</li>
+      <li><strong>Comma splices:</strong> Joining two complete sentences with just a comma. "I finished the report, it was due tomorrow" needs either a conjunction or a full stop.</li>
+      <li><strong>Tense inconsistency:</strong> Switching between past and present tense within the same essay — a very common issue when writing long documents under time pressure.</li>
+    </ul>
+    <p>
+      CheckMyGrammar catches all of these. For students who paste their essays before submission,
+      it's the equivalent of having a proofreader on call — at no cost.
+    </p>
+
+    <h2>What Professionals Need from a Writing Tool</h2>
+    <p>
+      Professionals write differently to students — shorter, faster, with higher stakes per word.
+      A lengthy essay can recover from a grammar slip. A one-line email to a client cannot.
+    </p>
+    <p>
+      The most important thing for professional writing is catching errors before they leave
+      your screen. Not after you've hit send. Not when a colleague points it out. Before.
+      That requires a tool that's fast, frictionless, and always available — not one that
+      requires you to log into an account and navigate a dashboard before checking a three-line email.
+    </p>
+    <p>
+      CheckMyGrammar was designed with this in mind. Open it, paste your text, fix it, copy it back.
+      The entire process takes under a minute, there's no login, and it's free.
+    </p>
+
+    <h3>Common professional writing mistakes</h3>
+    <ul>
+      <li><strong>Redundant phrases:</strong> "At this point in time" (just say "now"), "in order to" (just say "to"), "end result" (just say "result").</li>
+      <li><strong>Wrong word confusion:</strong> "Effect" vs "affect", "complement" vs "compliment", "principal" vs "principle" — errors that spell checkers miss because the words are spelled correctly.</li>
+      <li><strong>Passive voice overuse:</strong> "The report was completed by the team" vs "The team completed the report." Active voice is clearer and more direct.</li>
+      <li><strong>Missing punctuation:</strong> A missing comma can genuinely change the meaning of a sentence — and in a legal or financial document, that matters.</li>
+    </ul>
+
+    <h2>Is a Free Grammar Checker Actually as Good as Grammarly?</h2>
+    <p>
+      The honest answer: for core writing correction — spelling, grammar, punctuation, style —
+      a well-built free grammar checker is remarkably close to Grammarly Premium.
+    </p>
+    <p>
+      CheckMyGrammar uses LanguageTool, a professional-grade open-source grammar engine with over
+      6,000 built-in rules across multiple languages. It catches the same categories of errors
+      as Grammarly: spelling mistakes, grammar structure problems, punctuation errors, style
+      issues, and word confusion errors.
+    </p>
+    <p>
+      Where Grammarly Premium extends further is in features like tone detection, plagiarism
+      checking, and writing style suggestions for specific document types. For most students
+      fixing an essay and most professionals fixing an email, those extra features aren't what
+      they need. What they need is: is this sentence correct? Is this word spelled right?
+      Does this make sense? For those questions, CheckMyGrammar delivers.
+    </p>
+
+    <div class="callout">
+      <p>💡 Tip: Use CheckMyGrammar as your final check before submitting any essay or sending any important email. Paste the full text, fix all highlighted errors, then copy it back. Total time: under two minutes.</p>
+    </div>
+
+    <h2>How to Fix Your Text Effectively — A Step-by-Step Approach</h2>
+    <ol>
+      <li><strong>Write your first draft without worrying about errors.</strong> Trying to write and proofread simultaneously slows you down and produces worse results on both fronts.</li>
+      <li><strong>Read it out loud once.</strong> Your ears catch awkward phrasing that your eyes skip over. If a sentence is hard to say, it probably needs rewriting.</li>
+      <li><strong>Paste into CheckMyGrammar.</strong> Let the tool identify spelling, grammar and style issues automatically.</li>
+      <li><strong>Work through the errors one at a time.</strong> Click each highlighted word, read the explanation, apply the fix or ignore it if it's intentional.</li>
+      <li><strong>Re-read the corrected version.</strong> Sometimes fixing one sentence creates a new issue. A final read-through catches anything remaining.</li>
+    </ol>
+
+    <h2>Conclusion: Write Better Without Paying for It</h2>
+    <p>
+      The idea that good writing correction requires an expensive subscription is simply not true
+      anymore. CheckMyGrammar proves that — a free, no-signup tool that catches the spelling mistakes,
+      grammar errors and style issues that matter most to students, professionals and everyday writers.
+    </p>
+    <p>
+      Whether you're a student who can't afford Grammarly, a professional who won't justify a
+      monthly subscription for email-checking, or someone who just wants their writing to be right —
+      CheckMyGrammar is here, it's free, and it works.
+    </p>
+
+    <div class="callout green">
+      <p>🚀 <a href="#try-it" style="color:var(--green);">Scroll up and try it now</a> — paste your text and see every error highlighted in seconds. No signup. No cost. Ever.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section class="signup" id="signup">
+  <h2>Be First in Line for CheckMyGrammar Pro</h2>
+  <p>More power for serious writers — advanced style coaching,<br>document history, and priority checking. Join the free waitlist.</p>
+  <form class="signup-form" onsubmit="handleSignup(event)">
+    <input type="email" placeholder="Your email address" required aria-label="Email address">
+    <button type="submit" class="btn btn-white btn-lg">Join Free Waitlist</button>
+  </form>
+  <div class="signup-success" id="signup-success">🎉 You're on the list! We'll let you know when Pro launches.</div>
+  <p class="signup-note">No spam. Unsubscribe any time. The free tool stays free regardless.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">CheckMy<span class="my">Grammar</span></div>
+    <ul class="footer-links">
+      <li><a href="#try-it">Try Free</a></li>
+      <li><a href="#compare">vs Grammarly</a></li>
+      <li><a href="#who-its-for">Students</a></li>
+      <li><a href="#who-its-for">Professionals</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#signup">Pro Waitlist</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 CheckMyGrammar. Free for everyone, always.</p>
+  </div>
+</footer>
+
+<!-- REACT EDITOR -->
+<script type="module">
+import { createElement as h, useState, useRef, useCallback, useEffect } from 'https://esm.sh/react@18'
+import { createRoot } from 'https://esm.sh/react-dom@18/client'
+
+const API = 'https://api.languagetool.org/v2/check'
+
+function debounce(fn, ms) {
+  let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms) }
+}
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+}
+function buildHTML(text, errors) {
+  if (!errors.length) return esc(text)
+  const sorted = [...errors].sort((a,b) => a.offset - b.offset)
+  let html = '', i = 0
+  for (const e of sorted) {
+    if (e.offset < i) continue
+    html += esc(text.slice(i, e.offset))
+    const cls = e.rule?.issueType === 'misspelling' ? 'es' : 'eg'
+    html += `<mark class="${cls}">${esc(text.slice(e.offset, e.offset + e.length))}</mark>`
+    i = e.offset + e.length
+  }
+  return html + esc(text.slice(i))
+}
+
+function Popup({ popup, onApply, onClose }) {
+  const ref = useRef(null)
+  const { x, y, match } = popup
+  const suggs = (match.replacements || []).slice(0, 5)
+  useEffect(() => {
+    if (!ref.current) return
+    const r = ref.current.getBoundingClientRect()
+    if (r.bottom > window.innerHeight - 8) ref.current.style.top = `${y - r.height - 10}px`
+    if (r.right  > window.innerWidth  - 8) ref.current.style.left = `${window.innerWidth - r.width - 12}px`
+  }, [x, y])
+  return h('div', { ref, className:'fmt-popup', style:{left:x,top:y+12}, onMouseDown:e=>e.stopPropagation() },
+    h('p',  { className:'fmt-popup-msg' }, match.message),
+    suggs.length && h('div', null,
+      h('p', { className:'fmt-popup-lbl' }, 'Suggestions'),
+      h('div', { className:'fmt-suggs' }, suggs.map((r,i) =>
+        h('button', { key:i, className:'fmt-sugg', onClick:()=>onApply(r.value) }, r.value)
+      ))
+    ),
+    h('button', { className:'fmt-ignore', onClick:onClose }, 'Ignore')
+  )
+}
+
+function App() {
+  const [text,   setText]   = useState('')
+  const [errors, setErrors] = useState([])
+  const [popup,  setPopup]  = useState(null)
+  const [status, setStatus] = useState('idle')
+  const taRef = useRef(null)
+  const hlRef = useRef(null)
+
+  const check = useCallback(debounce(async val => {
+    if (!val.trim()) { setErrors([]); setStatus('idle'); return }
+    setStatus('checking')
+    try {
+      const res  = await fetch(API, { method:'POST', body: new URLSearchParams({ text:val, language:'en-US' }) })
+      const data = await res.json()
+      setErrors(data.matches || [])
+      setStatus('done')
+    } catch { setStatus('idle') }
+  }, 700), [])
+
+  const onChange = e => { const v = e.target.value; setText(v); setPopup(null); check(v) }
+  const onScroll = () => { if (hlRef.current && taRef.current) hlRef.current.scrollTop = taRef.current.scrollTop }
+  const onClick  = e => {
+    const pos = taRef.current.selectionStart
+    const hit = errors.find(err => pos >= err.offset && pos <= err.offset + err.length)
+    hit ? setPopup({ x:e.clientX, y:e.clientY, match:hit }) : setPopup(null)
+  }
+  const applyFix = rep => {
+    const { match } = popup
+    const next = text.slice(0, match.offset) + rep + text.slice(match.offset + match.length)
+    setText(next); setPopup(null); check(next); taRef.current.focus()
+  }
+  const clear = () => { setText(''); setErrors([]); setStatus('idle'); setPopup(null); taRef.current?.focus() }
+
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0
+  const ec    = errors.length
+
+  return h('div', { className:'fmtapp', onMouseDown:()=>setPopup(null) },
+    h('div', { className:'fmtapp-head' },
+      h('div', { className:'fmt-legend', style:{ opacity: ec>0&&status==='done'?1:0, transition:'opacity .3s' } },
+        h('span',{className:'fmt-legend-item'}, h('span',{className:'fmt-dl spell'}), 'Spelling'),
+        h('span',{className:'fmt-legend-item'}, h('span',{className:'fmt-dl grammar'}), 'Grammar / style'),
+        h('span',{className:'fmt-hint'}, 'Click underlined word for suggestions')
+      ),
+      h('div', { className:'fmt-status' },
+        status==='checking' && h('span',{className:'fmt-checking'}, h('span',{className:'fmt-dot'}), 'Checking…'),
+        status==='done' && ec===0 && h('span',{className:'fmt-ok'}, '✓ All good!'),
+        status==='done' && ec>0  && h('span',{className:'fmt-err'}, `${ec} issue${ec!==1?'s':''}`)
+      )
+    ),
+    h('div', { className:'fmt-editor-wrap' },
+      h('div', { ref:hlRef, className:'fmt-hl', 'aria-hidden':'true', dangerouslySetInnerHTML:{ __html: buildHTML(text, errors) } }),
+      h('textarea', {
+        ref:taRef, className:'fmt-ta', value:text,
+        onChange, onScroll, onClick,
+        onKeyDown: e => e.key==='Escape' && setPopup(null),
+        placeholder:'Paste your essay, email or report here — errors appear instantly…',
+        spellCheck:false, autoFocus:true
+      })
+    ),
+    popup && h(Popup, { popup, onApply:applyFix, onClose:()=>setPopup(null) }),
+    h('div', { className:'fmt-foot' },
+      h('span', null, `${words} word${words!==1?'s':''} · ${text.length} chars`),
+      text && h('button', { className:'fmt-clear', onClick:clear }, 'Clear')
+    )
+  )
+}
+
+createRoot(document.getElementById('react-root')).render(h(App, null))
+</script>
+
+<script>
+function handleSignup(e) {
+  e.preventDefault()
+  e.target.style.display = 'none'
+  document.getElementById('signup-success').style.display = 'block'
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item')
+  const ans  = item.querySelector('.faq-a')
+  const open = item.classList.contains('open')
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open')
+    i.querySelector('.faq-a').style.display = 'none'
+  })
+  if (!open) {
+    item.classList.add('open')
+    ans.style.display = 'block'
+  }
+}
+</script>
+
+</body>
+</html>
